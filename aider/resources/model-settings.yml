@@ -600,16 +600,51 @@
 
 - name: openrouter/deepseek/deepseek-r1-distill-llama-70b
   edit_format: diff
-  weak_model_name: openrouter/deepseek/deepseek-chat
+  weak_model_name: openrouter/deepseek/deepseek-r1-distill-llama-70b
+  use_repo_map: true
+  examples_as_sys_msg: true
+  extra_params:
+    max_tokens: 128000
+  caches_by_default: true
+  use_temperature: false
+  editor_model_name: openrouter/deepseek/deepseek-r1-distill-llama-70b
+  editor_edit_format: editor-diff
+
+- name: openrouter/deepseek/deepseek-r1-distill-llama-70b:free
+  edit_format: diff
+  weak_model_name: openrouter/deepseek/deepseek-r1-distill-llama-70b:free
   use_repo_map: true
   examples_as_sys_msg: true
   extra_params:
     max_tokens: 8192
   caches_by_default: true
   use_temperature: false
-  editor_model_name: openrouter/deepseek/deepseek-chat
+  editor_model_name: openrouter/deepseek/deepseek-r1-distill-llama-70b:free
   editor_edit_format: editor-diff
-  
+
+- name: openai/deepseek/deepseek-r1-distill-llama-70b:free
+  edit_format: diff
+  weak_model_name: openai/deepseek/deepseek-r1-distill-llama-70b:free
+  use_repo_map: true
+  examples_as_sys_msg: true
+  extra_params:
+    max_tokens: 64000
+    timeout: 9999999
+  streaming: true
+  editor_model_name: openai/deepseek/deepseek-r1-distill-llama-70b:free
+  editor_edit_format: editor-diff
+
+- name: openai/deepseek/deepseek-r1-distill-qwen-32b
+  edit_format: diff
+  weak_model_name: openai/deepseek/deepseek-r1-distill-qwen-32b
+  use_repo_map: true
+  examples_as_sys_msg: true
+  extra_params:
+    max_tokens: 64000
+  streaming: true
+  editor_model_name: openai/deepseek/deepseek-r1-distill-qwen-32b
+  editor_edit_format: editor-diff
+
 - name: fireworks_ai/accounts/fireworks/models/deepseek-r1
   edit_format: diff
   weak_model_name: fireworks_ai/accounts/fireworks/models/deepseek-v3
