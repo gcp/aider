@@ -544,3 +544,29 @@
   versions: 0.72.2.dev
   seconds_per_case: 24.2
   total_cost: 0.0000
+
+- dirname: 2025-02-12-23-52-08--deepseek-coder-v2-lite
+  test_cases: 225
+  model: DeepSeek Coder V2 Lite
+  edit_format: diff
+  commit_hash: d5dd252-dirty
+  pass_rate_1: 0.9
+  pass_rate_2: 2.2
+  pass_num_1: 2
+  pass_num_2: 5
+  percent_cases_well_formed: 56.9
+  error_outputs: 607
+  num_malformed_responses: 597
+  num_with_malformed_responses: 97
+  user_asks: 65
+  lazy_comments: 0
+  syntax_errors: 0
+  indentation_errors: 0
+  exhausted_context_windows: 0
+  test_timeouts: 2
+  total_tests: 225
+  command: aider --model openai/deepseek/deepseek-coder
+  date: 2025-02-12
+  versions: 0.74.2.dev
+  seconds_per_case: 105.3
+  total_cost: 0.0000
