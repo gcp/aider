@@ -414,6 +414,19 @@
   editor_model_name: openrouter/deepseek/deepseek-r1:free
   editor_edit_format: editor-diff
 
+- name: openai/deepseek/deepseek-r1
+  edit_format: diff
+  weak_model_name: openai/deepseek/deepseek-r1
+  use_repo_map: true
+  examples_as_sys_msg: true
+  extra_params:
+    max_tokens: 8192
+    timeout: 9999999
+  caches_by_default: true
+  use_temperature: false
+  editor_model_name: openai/deepseek/deepseek-r1
+  editor_edit_format: editor-diff
+
 - name: deepseek/deepseek-reasoner
   edit_format: diff
   weak_model_name: deepseek/deepseek-chat
